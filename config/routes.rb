@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       resources :users
       resources :challenges
 
-      post '/api/v1/user_challenges', to: 'i/v1/user_challenges#create'
+      post '/user_challenges', to: 'user_challenges#create'
     end
   end
   

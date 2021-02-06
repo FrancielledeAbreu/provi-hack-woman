@@ -23,4 +23,8 @@
 class UserChallenge < ApplicationRecord
   belongs_to :user
   belongs_to :challenge
+
+  STATUSES = %w(approved denied in_review)
+
+  enum status: STATUSES
 end

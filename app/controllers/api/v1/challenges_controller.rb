@@ -41,7 +41,7 @@ module Api::V1
 
     def challenge_params
       params.require(:challenge).permit(
-        :name, :description, :level, :challenges_type
+        :name, :description, :level, :challenges_type, :status
       )
     end
   end
