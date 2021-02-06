@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       post '/api/v1/user_challenges', to: 'i/v1/user_challenges#create'
     end
   end
+  
+  get 'login', to: 'sessions#login'
 end
