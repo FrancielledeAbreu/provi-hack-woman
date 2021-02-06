@@ -6,4 +6,6 @@ Rails.application.routes.draw do
       resources :products, only: :index
     end
   end
+  
+  get 'login', to: 'sessions#login'
 end
