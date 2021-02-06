@@ -5,6 +5,7 @@
 #  id              :bigint           not null, primary key
 #  challenges_type :integer          default("single")
 #  description     :text             not null
+#  image           :string
 #  level           :integer          default("easy")
 #  name            :string           not null
 #  status          :integer          default("active")

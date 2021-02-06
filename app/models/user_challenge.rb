@@ -3,7 +3,7 @@
 # Table name: user_challenges
 #
 #  id           :bigint           not null, primary key
-#  status       :integer          default(0)
+#  status       :integer          default("approved")
 #  url          :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
