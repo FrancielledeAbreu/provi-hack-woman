@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users
-      resources :products, only: :index
+      resources :challenges
+
+      post '/user_challenges', to: 'user_challenges#create'
     end
   end
   
