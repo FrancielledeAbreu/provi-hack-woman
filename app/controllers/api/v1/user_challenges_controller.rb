@@ -11,7 +11,7 @@ module Api::V1
       user_challenge = UserChallenge.new(user_challenge_params)
 
       if user_challenge.save
-          render json: user_challenge, status: 201
+        render json: user_challenge, status: 201
       else
         render json: user_challenge.errors.messages, status: 422
       end
