@@ -1,8 +1,15 @@
 module Api::V1
   class ChallengesController < ActionController::API
     before_action :load_challenge, only: [:show, :update, :delete]
-    def index      
-      render json: Challenge.all
+
+    def index
+      if params[:filter].present?
+        @challenges = load_from_filters(params[:filter])
+
+        render json: @challenges
+      else
+        render json: Challenge.all
+      end
     end
 
     def show
@@ -43,6 +50,14 @@ module Api::V1
       params.require(:challenge).permit(
         :name, :description, :level, :challenges_type, :status
       )
+    end
+
+    def load_from_filters(filters)
+      if filters[:type].present?
+        Challenge.where(challenges_type: filters[:type])
+      elsif filters[:name].present?
+         Challenge.where('name like ?', "%#{filters[:name]}%")
+      end
     end
   end
 end
