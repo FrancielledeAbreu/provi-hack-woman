@@ -29,7 +29,7 @@ https://provi-hack-api.herokuapp.com/
 ```
 localhost:3000/api/v1/<keyword>
 ```
-The <keyword> is "challenge" when working on the challenges in the db, or "users" when working on users in the db.
+The keyword is "challenge" when working on the challenges in the db, or "users" when working on users in the db.
 
 # ENDPOINTS
 
